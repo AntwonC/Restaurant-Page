@@ -1,6 +1,6 @@
 const pageLoadingFunction = () => { 
     const contentContainer = document.querySelector("#content"); 
-
+ 
     contentContainer.style.border = "30px solid blue";
     contentContainer.style.height = "850px";
     document.body.style.backgroundColor = "#1bea15";
@@ -18,7 +18,7 @@ const pageLoadingFunction = () => {
     imageElement.src = "./images/subway-logo.png";
     imageElement.style.width = "300px"; 
     imageElement.style.height = "200px";
-     imageElement.style.backgroundColor = "red";
+    imageElement.style.backgroundColor = "red";
     
     divImageContainer.appendChild(imageElement); 
     /* HEADER LOGO END */ 
@@ -30,25 +30,35 @@ const pageLoadingFunction = () => {
 
     
     const divAboutMeHeaderElement = document.createElement("header"); 
-    const divTextElement = document.createElement("div");
 
+    const divTextElement = document.createElement("div");
+    divTextElement.classList.add("hoursText");
     divTextElement.textContent = "Hours:"; 
     divTextElement.style.fontSize = "25px";
-    divTextElement.style.marginLeft = "100px";
+    divTextElement.style.fontFamily = "Chocolate"; 
+    //divTextElement.style.src = url("./fonts/Chocolate_Covered_Raindrops.ttf"); 
+    //divTextElement.style.fontStyle = "./fonts/Chocolate Covered Raindrops.ttf";
 
-    divAboutMeHeaderElement.appendChild(divTextElement);
+    divTextElement.style.marginLeft = "120px";
+    divTextElement.style.marginTop = "10px";
+    divTextElement.style.marginBottom = "10px";
+
+
     //divAboutMeHeaderElement.style.marginRight = "50px";
     
-    const divAboutMeElement = document.createElement("div"); 
-
+    
     divAboutMeHeaderElement.style.width = "320px";
     divAboutMeHeaderElement.style.border = "20px solid green"; 
     divAboutMeHeaderElement.style.borderRadius = "15px";
     divAboutMeHeaderElement.style.marginTop = "20px";
     divAboutMeHeaderElement.style.marginBottom = "20px";
+    divAboutMeHeaderElement.style.padding= "15px 15px 15px 15px";
     //divAboutMeHeaderElement.style.margin = "20px";
     divAboutMeHeaderElement.style.backgroundColor = "orange";
+
+    divAboutMeHeaderElement.appendChild(divTextElement);
     
+    const divAboutMeElement = document.createElement("div"); 
     
     divAboutMeElement.textContent = `Monday: 10AM-8PM 
                                      Tuesday: 10AM-8PM

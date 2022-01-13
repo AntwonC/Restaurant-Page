@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Chocolate"; 
+    src: url("./Chocolate_Covered_Raindrops.ttf");
+} 
+
+.hoursText {
+    font-family: "Chocolate"; 
+}
+
