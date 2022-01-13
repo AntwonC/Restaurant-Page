@@ -15,7 +15,7 @@ const pageLoadingFunction = () => {
     divImageContainer.style.marginBottom = "10px";
     
     const imageElement = document.createElement("img"); 
-    imageElement.src = "/home/anthony/the_odin_project/Restaurant-Page/subway-logo.png";
+    imageElement.src = "./images/subway-logo.png";
     imageElement.style.width = "300px"; 
     imageElement.style.height = "200px";
      imageElement.style.backgroundColor = "red";
@@ -27,34 +27,74 @@ const pageLoadingFunction = () => {
     const divAboutMeContainer = document.createElement("div"); 
     divAboutMeContainer.style.display = "flex"; 
     divAboutMeContainer.style.justifyContent = "center";
+
+    
+    const divAboutMeHeaderElement = document.createElement("header"); 
+    const divTextElement = document.createElement("div");
+
+    divTextElement.textContent = "Hours:"; 
+    divTextElement.style.fontSize = "25px";
+    divTextElement.style.marginLeft = "100px";
+
+    divAboutMeHeaderElement.appendChild(divTextElement);
+    //divAboutMeHeaderElement.style.marginRight = "50px";
     
     const divAboutMeElement = document.createElement("div"); 
-    divAboutMeElement.textContent = "Looking for a tasty sandwich? Subway Sandwiches are filling and tasty!";
+
+    divAboutMeHeaderElement.style.width = "320px";
+    divAboutMeHeaderElement.style.border = "20px solid green"; 
+    divAboutMeHeaderElement.style.borderRadius = "15px";
+    divAboutMeHeaderElement.style.marginTop = "20px";
+    divAboutMeHeaderElement.style.marginBottom = "20px";
+    //divAboutMeHeaderElement.style.margin = "20px";
+    divAboutMeHeaderElement.style.backgroundColor = "orange";
+    
+    
+    divAboutMeElement.textContent = `Monday: 10AM-8PM 
+                                     Tuesday: 10AM-8PM
+                                     Wednesday: 10AM-8PM
+                                     Thursday: 10AM-8PM
+                                     Friday: 10AM-8PM
+                                     Saturday: 11AM-7PM
+                                     Sunday: 11AM-5PM`;
     divAboutMeElement.style.color = "blue"; 
     divAboutMeElement.style.fontSize = "30px"; 
-    divAboutMeElement.style.width = "250px";
-    divAboutMeElement.style.border = "20px solid green"; 
-    divAboutMeElement.style.borderRadius = "15px";
-    divAboutMeElement.style.marginTop = "20px";
-    divAboutMeElement.style.marginBottom = "20px";
-    divAboutMeElement.style.backgroundColor = "orange";
-   
-    
-    divAboutMeContainer.appendChild(divAboutMeElement); 
+    divAboutMeElement.style.marginRight = "-20px";
+    //divAboutMeElement.style.left = "-500px";
+    //divAboutMeElement.style.marginLeft = "-20px";
+
+
+    divAboutMeHeaderElement.appendChild(divAboutMeElement);
+   // divAboutMeContainer.appendChild(divAboutMeHeaderElement);
+    divAboutMeContainer.appendChild(divAboutMeHeaderElement); 
     /* MID-CONTENT ENDS */
-    const list = document.createElement("ul"); 
+    /* LIST STARTS */
+    const listContainer = document.createElement("div"); 
+    listContainer.style.display = "flex"; 
+    listContainer.style.justifyContent = "center";
+
+    const list = document.createElement("ol"); 
     
     const listElementOne = document.createElement("li"); 
-    listElementOne.textContent = "1. The Way A Sandwich Should Be."; 
+    listElementOne.textContent = "The Way A Sandwich Should Be."; 
+    listElementOne.style.color = "orange";
+    listElementOne.style.fontSize = "25px";
+    
 
     const listElementTwo = document.createElement("li"); 
-    listElementTwo.textContent = "2. Think fresh."; 
-
+    listElementTwo.textContent = "Think fresh."; 
+    listElementTwo.style.color = "#1a840b";
+    listElementTwo.style.fontSize = "25px";
+    
     const listElementThree = document.createElement("li"); 
-    listElementThree.textContent = "3. Eat fresh."; 
+    listElementThree.textContent = "Eat fresh."; 
+    listElementThree.style.color = "orange";
+    listElementThree.style.fontSize = "25px";
 
     const listElementFour = document.createElement("li"); 
-    listElementFour.textContent = "4. Fresh is What We Do."; 
+    listElementFour.textContent = "Fresh is What We Do."; 
+    listElementFour.style.color = "#1a840b";
+    listElementFour.style.fontSize = "25px";
 
 
     list.appendChild(listElementOne); 
@@ -62,12 +102,17 @@ const pageLoadingFunction = () => {
     list.appendChild(listElementThree); 
     list.appendChild(listElementFour);  
 
+    listContainer.appendChild(list); 
+
+    /* LIST ENDS */
+    
     //contentContainer.appendChild(imageElement); 
     contentContainer.appendChild(divImageContainer); 
     
     //contentContainer.appendChild(divAboutMeElement); 
     contentContainer.appendChild(divAboutMeContainer); 
-    contentContainer.appendChild(list); 
+   // contentContainer.appendChild(list); 
+    contentContainer.appendChild(listContainer); 
     
 }
 
