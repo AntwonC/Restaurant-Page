@@ -1,5 +1,6 @@
 const path = require('path'); 
 
+
 module.exports =  { 
     entry: '/src/index.js', 
     devtool: 'inline-source-map',
@@ -17,17 +18,9 @@ module.exports =  {
             ]
           },
           {
-            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-            use: [
-              {
-                loader: 'file-loader',
-                options: {
-                  name: '[name].[ext]',
-                  outputPath: 'fonts/'
-                }
-              }
-        ]
-    }
-   ]
+            test: /\.(woff|woff2|eot|ttf|otf)$/i,
+            type: 'asset/resource',
+          },
+   ],
   },
 };
