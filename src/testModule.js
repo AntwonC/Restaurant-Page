@@ -2,7 +2,7 @@ const pageLoadingFunction = () => {
     const contentContainer = document.querySelector("#content"); 
  
     contentContainer.style.border = "30px solid blue";
-    contentContainer.style.height = "850px";
+    contentContainer.style.height = "900px";
     document.body.style.backgroundColor = "#1bea15";
     
    
@@ -15,10 +15,10 @@ const pageLoadingFunction = () => {
     divImageContainer.style.marginBottom = "10px";
     
     const imageElement = document.createElement("img"); 
-    imageElement.src = "./images/subway-logo.png";
+    imageElement.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/subway-logo.png";   
     imageElement.style.width = "300px"; 
     imageElement.style.height = "200px";
-    imageElement.style.backgroundColor = "red";
+    imageElement.style.backgroundColor = "orange";
     
     divImageContainer.appendChild(imageElement); 
     /* HEADER LOGO END */ 
@@ -34,12 +34,12 @@ const pageLoadingFunction = () => {
     const divTextElement = document.createElement("div");
     divTextElement.classList.add("hoursText");
     divTextElement.textContent = "Hours:"; 
-    divTextElement.style.fontSize = "25px";
+    divTextElement.style.fontSize = "50px";
     divTextElement.style.fontFamily = "Chocolate"; 
     //divTextElement.style.src = url("./fonts/Chocolate_Covered_Raindrops.ttf"); 
     //divTextElement.style.fontStyle = "./fonts/Chocolate Covered Raindrops.ttf";
 
-    divTextElement.style.marginLeft = "120px";
+    divTextElement.style.marginLeft = "110px";
     divTextElement.style.marginTop = "10px";
     divTextElement.style.marginBottom = "10px";
 
@@ -52,7 +52,7 @@ const pageLoadingFunction = () => {
     divAboutMeHeaderElement.style.borderRadius = "15px";
     divAboutMeHeaderElement.style.marginTop = "20px";
     divAboutMeHeaderElement.style.marginBottom = "20px";
-    divAboutMeHeaderElement.style.padding= "15px 15px 15px 15px";
+    divAboutMeHeaderElement.style.padding= "15px 15px 30px 15px";
     //divAboutMeHeaderElement.style.margin = "20px";
     divAboutMeHeaderElement.style.backgroundColor = "orange";
 
@@ -78,16 +78,21 @@ const pageLoadingFunction = () => {
    // divAboutMeContainer.appendChild(divAboutMeHeaderElement);
     divAboutMeContainer.appendChild(divAboutMeHeaderElement); 
     /* MID-CONTENT ENDS */
+
     /* LIST STARTS */
     const listContainer = document.createElement("div"); 
     listContainer.style.display = "flex"; 
     listContainer.style.justifyContent = "center";
 
     const list = document.createElement("ol"); 
-    
+    list.style.border = "20px solid green";
+    list.style.borderRadius = "20px";
+    list.style.padding = "30px 30px 30px 30px";
+    list.style.backgroundColor = "orange";
+
     const listElementOne = document.createElement("li"); 
     listElementOne.textContent = "The Way A Sandwich Should Be."; 
-    listElementOne.style.color = "orange";
+    listElementOne.style.color = "yellow";
     listElementOne.style.fontSize = "25px";
     
 
@@ -98,7 +103,7 @@ const pageLoadingFunction = () => {
     
     const listElementThree = document.createElement("li"); 
     listElementThree.textContent = "Eat fresh."; 
-    listElementThree.style.color = "orange";
+    listElementThree.style.color = "yellow";
     listElementThree.style.fontSize = "25px";
 
     const listElementFour = document.createElement("li"); 
