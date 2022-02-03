@@ -1,10 +1,54 @@
 const pageLoadingFunction = () => { 
     const contentContainer = document.querySelector("#content"); 
- 
-    contentContainer.style.border = "30px solid blue";
-    contentContainer.style.height = "900px";
-    document.body.style.backgroundColor = "#1bea15";
     
+    contentContainer.style.background = "linear-gradient(to right top, #109a26, #e5b71a)";
+    contentContainer.style.border = "20px solid transparent";
+    //contentContainer.style.borderRadius = "20px";
+    //contentContainer.style.border = "30px solid orange";
+    contentContainer.style.height = "930px";
+    contentContainer.style.width = "800px";
+    contentContainer.style.margin = "0 auto";
+    //contentContainer.style.display = "flex";
+    //contentContainer.style.justifyContent = "center";
+    document.body.style.backgroundColor = "#1bea15";
+
+    /* TAB SWITCHING STARTS */
+    const divTabsContainer = document.createElement("header");
+    divTabsContainer.classList.add("tabs");
+    divTabsContainer.style.display = "flex";
+    divTabsContainer.style.justifyContent = "center";
+
+    const homeTab = document.createElement("div"); 
+    homeTab.classList.add("div-home-tab");
+    homeTab.textContent = "Home"; 
+    homeTab.style.width = "150px"; 
+    homeTab.style.height = "50px"; 
+    homeTab.style.background = "red"; 
+    homeTab.style.textAlign = "center";
+
+    const menuTab = document.createElement("div"); 
+    menuTab.classList.add("div-menu-tab");
+    menuTab.textContent = "Tab"; 
+    menuTab.style.width = "150px"; 
+    menuTab.style.height = "50px"; 
+    menuTab.style.background = "red";
+    menuTab.style.textAlign = "center";
+
+
+    const contactTab = document.createElement("div"); 
+    contactTab.classList.add("div-contact-tab");
+    contactTab.textContent = "Contact"; 
+    contactTab.style.width = "150px"; 
+    contactTab.style.height = "50px"; 
+    contactTab.style.background = "red";
+    contactTab.style.textAlign = "center";
+
+    divTabsContainer.appendChild(homeTab); 
+    divTabsContainer.appendChild(menuTab); 
+    divTabsContainer.appendChild(contactTab); 
+    
+
+    /* TAB SWITCHING END */
    
     /* HEADER LOGO STARTS */ 
     const divImageContainer = document.createElement("div"); 
@@ -13,13 +57,15 @@ const pageLoadingFunction = () => {
     divImageContainer.style.justifyContent = "center"; 
     divImageContainer.style.marginTop = "10px";
     divImageContainer.style.marginBottom = "10px";
+    //divImageContainer.style.border = "20px solid green";
     
     const imageElement = document.createElement("img"); 
     imageElement.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/subway-logo.png";   
     imageElement.style.width = "300px"; 
     imageElement.style.height = "200px";
     imageElement.style.backgroundColor = "orange";
-    
+    imageElement.style.border = "20px solid green";
+
     divImageContainer.appendChild(imageElement); 
     /* HEADER LOGO END */ 
 
@@ -121,13 +167,12 @@ const pageLoadingFunction = () => {
 
     /* LIST ENDS */
     
-    //contentContainer.appendChild(imageElement); 
+    /* APPENDING CHILDREN TO CONTENT */
+    contentContainer.appendChild(divTabsContainer); 
     contentContainer.appendChild(divImageContainer); 
-    
-    //contentContainer.appendChild(divAboutMeElement); 
     contentContainer.appendChild(divAboutMeContainer); 
-   // contentContainer.appendChild(list); 
     contentContainer.appendChild(listContainer); 
+    /* APPENDING CHILDREN TO CONTENT */
     
 }
 
