@@ -1,3 +1,52 @@
+const addTabsFunction = () => {
+      const contentContainer = document.querySelector("#content"); 
+      /* TAB SWITCHING STARTS */
+      const divTabsContainer = document.createElement("header");
+      divTabsContainer.classList.add("tabs");
+      divTabsContainer.style.display = "flex";
+      divTabsContainer.style.justifyContent = "center";
+  
+      const homeTab = document.createElement("div"); 
+      homeTab.setAttribute("id", "div-home-tab"); 
+      homeTab.textContent = "Home"; 
+      homeTab.style.width = "150px"; 
+      homeTab.style.height = "50px"; 
+      homeTab.style.background = "#109a26"; 
+      homeTab.style.textAlign = "center";
+      homeTab.style.border = "2px black solid";
+      homeTab.style.marginRight = "5px";
+      homeTab.style.marginLeft = "5px";
+      
+      const menuTab = document.createElement("div"); 
+      menuTab.setAttribute("id", "div-menu-tab"); 
+      menuTab.textContent = "Menu"; 
+      menuTab.style.width = "150px"; 
+      menuTab.style.height = "50px"; 
+      menuTab.style.background = "#109a26";
+      menuTab.style.textAlign = "center";
+      menuTab.style.border = "2px black solid";
+      menuTab.style.marginRight = "5px";
+      menuTab.style.marginLeft = "5px";
+
+      const contactTab = document.createElement("div"); 
+      contactTab.setAttribute("id", "div-contact-tab"); 
+      contactTab.textContent = "Contact"; 
+      contactTab.style.width = "150px"; 
+      contactTab.style.height = "50px"; 
+      contactTab.style.background = "#109a26";
+      contactTab.style.textAlign = "center";
+      contactTab.style.border = "2px black solid";
+      contactTab.style.marginRight = "5px";
+      contactTab.style.marginLeft = "5px";
+  
+      divTabsContainer.appendChild(homeTab); 
+      divTabsContainer.appendChild(menuTab); 
+      divTabsContainer.appendChild(contactTab); 
+      /* TAB SWITCHING END */
+
+      contentContainer.appendChild(divTabsContainer); 
+}
+
 const pageLoadingFunction = () => { 
     const contentContainer = document.querySelector("#content"); 
     
@@ -5,50 +54,16 @@ const pageLoadingFunction = () => {
     contentContainer.style.border = "20px solid transparent";
     //contentContainer.style.borderRadius = "20px";
     //contentContainer.style.border = "30px solid orange";
-    contentContainer.style.height = "930px";
+    contentContainer.style.height = "990px";
     contentContainer.style.width = "800px";
     contentContainer.style.margin = "0 auto";
     //contentContainer.style.display = "flex";
     //contentContainer.style.justifyContent = "center";
     document.body.style.backgroundColor = "#1bea15";
 
-    /* TAB SWITCHING STARTS */
-    const divTabsContainer = document.createElement("header");
-    divTabsContainer.classList.add("tabs");
-    divTabsContainer.style.display = "flex";
-    divTabsContainer.style.justifyContent = "center";
 
-    const homeTab = document.createElement("div"); 
-    homeTab.classList.add("div-home-tab");
-    homeTab.textContent = "Home"; 
-    homeTab.style.width = "150px"; 
-    homeTab.style.height = "50px"; 
-    homeTab.style.background = "red"; 
-    homeTab.style.textAlign = "center";
-
-    const menuTab = document.createElement("div"); 
-    menuTab.classList.add("div-menu-tab");
-    menuTab.textContent = "Tab"; 
-    menuTab.style.width = "150px"; 
-    menuTab.style.height = "50px"; 
-    menuTab.style.background = "red";
-    menuTab.style.textAlign = "center";
-
-
-    const contactTab = document.createElement("div"); 
-    contactTab.classList.add("div-contact-tab");
-    contactTab.textContent = "Contact"; 
-    contactTab.style.width = "150px"; 
-    contactTab.style.height = "50px"; 
-    contactTab.style.background = "red";
-    contactTab.style.textAlign = "center";
-
-    divTabsContainer.appendChild(homeTab); 
-    divTabsContainer.appendChild(menuTab); 
-    divTabsContainer.appendChild(contactTab); 
-    
-
-    /* TAB SWITCHING END */
+    const homeTabElement = document.querySelector("#div-home-tab");
+    homeTabElement.style.background = "#e5b71a";
    
     /* HEADER LOGO STARTS */ 
     const divImageContainer = document.createElement("div"); 
@@ -113,7 +128,8 @@ const pageLoadingFunction = () => {
                                      Friday: 10AM-8PM
                                      Saturday: 11AM-7PM
                                      Sunday: 11AM-5PM`;
-    divAboutMeElement.style.color = "blue"; 
+    //divAboutMeElement.style.color = "blue"; 
+    divAboutMeElement.style.fontWeight = "bold";
     divAboutMeElement.style.fontSize = "30px"; 
     divAboutMeElement.style.marginRight = "-20px";
     //divAboutMeElement.style.left = "-500px";
@@ -168,7 +184,7 @@ const pageLoadingFunction = () => {
     /* LIST ENDS */
     
     /* APPENDING CHILDREN TO CONTENT */
-    contentContainer.appendChild(divTabsContainer); 
+    //contentContainer.appendChild(divTabsContainer); 
     contentContainer.appendChild(divImageContainer); 
     contentContainer.appendChild(divAboutMeContainer); 
     contentContainer.appendChild(listContainer); 
@@ -176,5 +192,57 @@ const pageLoadingFunction = () => {
     
 }
 
-export default pageLoadingFunction; 
+const homeTabLoadingFunction = () => {
+  console.log("homeTabLoadingFunction has been called.");
+
+  const homeTabElement = document.querySelector("#div-home-tab");
+  const menuTabElement = document.querySelector("#div-menu-tab");
+  const contactTabElement = document.querySelector("#div-contact-tab");
+
+  menuTabElement.style.background = "#109a26";
+  contactTabElement.style.background = "#109a26";
+
+  pageLoadingFunction(); 
+
+}
+
+const menuTabLoadingFunction = () => {
+  console.log("menuTabLoadingFunction has been called."); 
+
+  const contentContainer = document.querySelector("#content"); 
+  const numberOfElements = contentContainer.querySelectorAll("*");
+  const homeTabElement = document.querySelector("#div-home-tab");
+  const menuTabElement = document.querySelector("#div-menu-tab");
+  const contactTabElement = document.querySelector("#div-contact-tab");
+
+  //console.log(numberOfElements.length);
+  homeTabElement.style.background = "#109a26";
+  menuTabElement.style.background = "#e5b71a";
+  contactTabElement.style.background = "#109a26";
+
+  for(let i = 4; i < numberOfElements.length; i++) {
+    numberOfElements[i].remove(); 
+  }
+  
+}
+
+const contactTabLoadingFunction = () => {
+    console.log("contactTabLoadingFunction has been called."); 
+
+    const contentContainer = document.querySelector("#content"); 
+    const numberOfElements = contentContainer.querySelectorAll("*");
+    const homeTabElement = document.querySelector("#div-home-tab");
+    const menuTabElement = document.querySelector("#div-menu-tab");
+    const contactTabElement = document.querySelector("#div-contact-tab");
+
+    for(let i = 4; i < numberOfElements.length; i++) {
+      numberOfElements[i].remove(); 
+    }
+
+    homeTabElement.style.background = "#109a26";
+    menuTabElement.style.background = "#109a26";
+    contactTabElement.style.background = "#e5b71a";
+}
+
+export {addTabsFunction, pageLoadingFunction, homeTabLoadingFunction, menuTabLoadingFunction, contactTabLoadingFunction}; 
 
