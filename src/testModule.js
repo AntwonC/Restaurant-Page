@@ -443,7 +443,7 @@ const menuTabLoadingFunction = () => {
    chocolateCookiePrice.style.marginRight = "210px";
  
    chocolateCookieImage.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/Chocolate_Chip.jpg";
-   chocolateCookieImage.style.width = "250px"; 
+   chocolateCookieImage.style.width = "275px"; 
    chocolateCookieImage.style.height = "200px";
 
    chocolateCookieContainer.appendChild(chocolateCookieDesc);
@@ -452,6 +452,42 @@ const menuTabLoadingFunction = () => {
 
    /* Chocolate Chip ENDS */
 
+   /* White Chip STARTS */
+   const whiteChipContainer = document.createElement("div"); 
+   const whiteChipDesc = document.createElement("p"); 
+   const whiteChipImage = document.createElement("img"); 
+   const whiteChipPrice = document.createElement("p"); 
+
+   whiteChipDesc.classList.add("food-description");
+   whiteChipDesc.style.fontFamily = "Rocko";
+   whiteChipDesc.style.fontStyle = "normal";
+   whiteChipDesc.textContent = `A white chip cookie.
+                                      People love this thing.`
+
+   whiteChipContainer.textContent = "White Chip Cookie";
+   whiteChipContainer.style.fontStyle = "italic";
+   whiteChipContainer.style.fontSize = "20px";
+   whiteChipContainer.style.display = "flex"; 
+   whiteChipContainer.style.flexDirection = "column";
+   whiteChipContainer.style.alignItems = "center";
+   whiteChipContainer.style.marginTop = "10px";
+   whiteChipContainer.style.marginLeft = "230px";
+   whiteChipContainer.style.border = "20px solid green";
+   whiteChipContainer.style.padding = "15px 15px 15px 15px";
+   whiteChipContainer.style.width = "300px";
+
+   whiteChipPrice.textContent = "$0.85";
+   whiteChipPrice.style.marginRight = "210px";
+ 
+   whiteChipImage.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/White_Chip.jpg";
+   whiteChipImage.style.width = "275px"; 
+   whiteChipImage.style.height = "200px";
+
+   whiteChipContainer.appendChild(whiteChipDesc);
+   whiteChipContainer.appendChild(whiteChipPrice);
+   whiteChipContainer.appendChild(whiteChipImage); 
+
+   /* White Chip ENDS */
   contentContainer.appendChild(menuTextContainer); 
   contentContainer.appendChild(steakAndCheeseContainer); 
   contentContainer.appendChild(spicyItalianContainer); 
@@ -459,6 +495,7 @@ const menuTabLoadingFunction = () => {
   contentContainer.appendChild(hamContainer);
   contentContainer.appendChild(sidesTextContainer);
   contentContainer.appendChild(chocolateCookieContainer);
+  contentContainer.appendChild(whiteChipContainer);
 
 
   
@@ -480,6 +517,64 @@ const contactTabLoadingFunction = () => {
     homeTabElement.style.background = "#109a26";
     menuTabElement.style.background = "#109a26";
     contactTabElement.style.background = "#e5b71a";
+
+
+    const contactHeaderContainer = document.createElement("div"); 
+    contactHeaderContainer.textContent = "Contact Information"; 
+    contactHeaderContainer.style.fontSize = "30px"; 
+    contactHeaderContainer.style.fontWeight = "bold";
+    contactHeaderContainer.style.display = "flex";
+    contactHeaderContainer.style.justifyContent = "center";
+    contactHeaderContainer.style.background = "red";
+    contactHeaderContainer.style.marginTop = "10px";
+    contactHeaderContainer.style.marginLeft = "50px";
+    contactHeaderContainer.style.marginRight = "50px";
+    contactHeaderContainer.style.width = "700px";
+
+    const employeeOneContainer = document.createElement("div"); 
+    const employeeOneDesc = document.createElement("p"); 
+    const employeeOneImage = document.createElement("img"); 
+    const employeeOnePrice = document.createElement("p"); 
+
+    
+    employeeOneContainer.style.fontStyle = "italic";
+    employeeOneContainer.style.fontSize = "20px";
+    employeeOneContainer.style.display = "flex"; 
+    employeeOneContainer.style.flexDirection = "row";
+    employeeOneContainer.style.alignItems = "center";
+    employeeOneContainer.style.marginTop = "10px";
+    employeeOneContainer.style.marginLeft = "230px";
+    employeeOneContainer.style.border = "20px solid green";
+    employeeOneContainer.style.padding = "15px 15px 15px 15px";
+    employeeOneContainer.style.width = "300px";
+    employeeOneContainer.style.height = "100px";
+
+    employeeOneImage.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/spyware.png";
+    employeeOneImage.style.width = "125px"; 
+    employeeOneImage.style.height = "100px";
+    employeeOneImage.style.marginRight = "10px";
+    employeeOneImage.style.marginBottom = "30px";
+
+    employeeOneDesc.textContent = "Employee 1";
+    employeeOneDesc.style.marginBottom = `100px`;
+    //contactHeaderDesc.style.paddingLeft = "40px";
+
+    employeeOnePrice.textContent = `Phone Number: 999-999-999`;
+    employeeOnePrice.style.marginRight = "50px";
+    employeeOnePrice.style.marginTop = "30px";
+    employeeOnePrice.style.paddingLeft = "20px";
+    employeeOnePrice.style.width = "100px";
+    
+
+    employeeOneContainer.appendChild(employeeOneImage); 
+    employeeOneContainer.appendChild(employeeOneDesc);
+    employeeOneContainer.appendChild(employeeOnePrice);
+
+    contentContainer.appendChild(contactHeaderContainer); 
+    contentContainer.appendChild(employeeOneContainer); 
+ 
+
+
 }
 
 export {addTabsFunction, pageLoadingFunction, homeTabLoadingFunction, menuTabLoadingFunction, contactTabLoadingFunction}; 
