@@ -2,6 +2,8 @@ import {addTabsFunction, pageLoadingFunction , homeTabLoadingFunction, menuTabLo
 import "./styles.css";
 
 addTabsFunction(); 
+//menuTabLoadingFunction(); 
+//homeTabLoadingFunction();
 pageLoadingFunction(); 
 
 const homeTabElement = document.querySelector("#div-home-tab");

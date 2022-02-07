@@ -1,9 +1,21 @@
 @font-face {
     font-family: "Chocolate"; 
-    src: url("./fonts/Chocolate_Covered_Raindrops.ttf") ;
+    src: url("./fonts/Chocolate_Covered_Raindrops.ttf");
 } 
+
+@font-face {
+    font-family: "Rocko"; 
+    src: url("./fonts/RockoFLF.ttf");
+}
 
 .hoursText {
     font-family: "Chocolate"; 
 }
 
+.food-description {
+    font-family: "Rocko";
+}
+
+#div-home-tab {
+    background-image: url('/home/anthony/the_odin_project/Restaurant-Page/src/images/sandwich.png');
+}
