@@ -86,7 +86,7 @@ const pageLoadingFunction = () => {
     //divImageContainer.style.border = "20px solid green";
     
     const imageElement = document.createElement("img"); 
-    imageElement.src = "src/images/subway-logo.png";   
+    imageElement.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/subway-logo.png";   
     imageElement.style.width = "300px"; 
     imageElement.style.height = "200px";
     imageElement.style.backgroundColor = "orange";
@@ -278,7 +278,7 @@ const menuTabLoadingFunction = () => {
   steakAndCheesePrice.textContent = "$4.75";
   steakAndCheesePrice.style.marginRight = "210px";
   
-  steakAndCheeseImage.src = "src/images/Steak.jpg";
+  steakAndCheeseImage.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/Steak.jpg";
   steakAndCheeseImage.style.width = "175px"; 
   steakAndCheeseImage.style.height = "175px";
 
@@ -320,7 +320,7 @@ const menuTabLoadingFunction = () => {
   spicyItalianPrice.textContent = "$3.75";
   spicyItalianPrice.style.marginRight = "210px";
   
-  spicyItalianImage.src = "src/images/Spicy.jpg";
+  spicyItalianImage.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/Spicy.jpg";
   spicyItalianImage.style.width = "175px"; 
   spicyItalianImage.style.height = "175px";
 
@@ -357,7 +357,7 @@ const menuTabLoadingFunction = () => {
    turkeyPrice.textContent = "$4.25";
    turkeyPrice.style.marginRight = "210px";
  
-   turkeyImage.src = "src/images/Turkey.jpg";
+   turkeyImage.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/Turkey.jpg";
    turkeyImage.style.width = "175px"; 
    turkeyImage.style.height = "175px";
 
@@ -394,7 +394,7 @@ const menuTabLoadingFunction = () => {
    hamPrice.textContent = "$3.75";
    hamPrice.style.marginRight = "210px";
  
-   hamImage.src = "src/images/Ham.jpg";
+   hamImage.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/Ham.jpg";
    hamImage.style.width = "175px"; 
    hamImage.style.height = "175px";
 
@@ -442,7 +442,7 @@ const menuTabLoadingFunction = () => {
    chocolateCookiePrice.textContent = "$0.85";
    chocolateCookiePrice.style.marginRight = "210px";
  
-   chocolateCookieImage.src = "src/images/Chocolate_Chip.jpg";
+   chocolateCookieImage.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/Chocolate_Chip.jpg";
    chocolateCookieImage.style.width = "275px"; 
    chocolateCookieImage.style.height = "200px";
 
@@ -479,7 +479,7 @@ const menuTabLoadingFunction = () => {
    whiteChipPrice.textContent = "$0.85";
    whiteChipPrice.style.marginRight = "210px";
  
-   whiteChipImage.src = "src/images/White_Chip.jpg";
+   whiteChipImage.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/White_Chip.jpg";
    whiteChipImage.style.width = "275px"; 
    whiteChipImage.style.height = "200px";
 
@@ -550,7 +550,7 @@ const contactTabLoadingFunction = () => {
     employeeOneContainer.style.width = "300px";
     employeeOneContainer.style.height = "100px";
 
-    employeeOneImage.src = "src/images/spyware.png";
+    employeeOneImage.src = "/home/anthony/the_odin_project/Restaurant-Page/src/images/spyware.png";
     employeeOneImage.style.width = "125px"; 
     employeeOneImage.style.height = "100px";
     employeeOneImage.style.marginRight = "10px";
