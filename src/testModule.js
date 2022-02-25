@@ -204,7 +204,7 @@ const pageLoadingFunction = () => {
 }
 
 const homeTabLoadingFunction = () => {
-  console.log("homeTabLoadingFunction has been called.");
+ // console.log("homeTabLoadingFunction has been called.");
 
   const homeTabElement = document.querySelector("#div-home-tab");
   const menuTabElement = document.querySelector("#div-menu-tab");
@@ -218,7 +218,7 @@ const homeTabLoadingFunction = () => {
 }
 
 const menuTabLoadingFunction = () => {
-  console.log("menuTabLoadingFunction has been called."); 
+ // console.log("menuTabLoadingFunction has been called."); 
 
   const contentContainer = document.querySelector("#content"); 
   const numberOfElements = contentContainer.querySelectorAll("*");
@@ -235,7 +235,7 @@ const menuTabLoadingFunction = () => {
     numberOfElements[i].remove(); 
   }
 
-  contentContainer.style.height = "6000px";
+  contentContainer.style.height = "3100px";
 
   const menuTextContainer = document.createElement("div"); 
   menuTextContainer.textContent = "Menu"; 
@@ -243,7 +243,7 @@ const menuTabLoadingFunction = () => {
   menuTextContainer.style.fontWeight = "bold";
   menuTextContainer.style.display = "flex";
   menuTextContainer.style.justifyContent = "center";
-  menuTextContainer.style.background = "red";
+  menuTextContainer.style.background = "green";
   menuTextContainer.style.marginTop = "10px";
   menuTextContainer.style.marginLeft = "50px";
   menuTextContainer.style.marginRight = "50px";
@@ -502,7 +502,7 @@ const menuTabLoadingFunction = () => {
 }
 
 const contactTabLoadingFunction = () => {
-    console.log("contactTabLoadingFunction has been called."); 
+   // console.log("contactTabLoadingFunction has been called."); 
 
     const contentContainer = document.querySelector("#content"); 
     const numberOfElements = contentContainer.querySelectorAll("*");
@@ -518,6 +518,7 @@ const contactTabLoadingFunction = () => {
     menuTabElement.style.background = "#109a26";
     contactTabElement.style.background = "#e5b71a";
 
+    contentContainer.style.height = "600px";
 
     const contactHeaderContainer = document.createElement("div"); 
     contactHeaderContainer.textContent = "Contact Information"; 
@@ -525,7 +526,7 @@ const contactTabLoadingFunction = () => {
     contactHeaderContainer.style.fontWeight = "bold";
     contactHeaderContainer.style.display = "flex";
     contactHeaderContainer.style.justifyContent = "center";
-    contactHeaderContainer.style.background = "red";
+    contactHeaderContainer.style.background = "orange";
     contactHeaderContainer.style.marginTop = "10px";
     contactHeaderContainer.style.marginLeft = "50px";
     contactHeaderContainer.style.marginRight = "50px";
